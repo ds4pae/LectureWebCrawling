@@ -15,7 +15,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    private static String WEB_DRIVER_PATH = "C:\\Users\\joe04\\chromedriver-win64\\chromedriver.exe"; //크롬웹드라이버 경로 지정
+    private static String WEB_DRIVER_PATH = "C:\\Users\\userName\\chromedriver-win64\\chromedriver.exe"; //크롬웹드라이버 경로 지정
 
     public static void main(String[] args) throws InterruptedException {
         // 아이디 비밀번호 입력
