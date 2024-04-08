@@ -37,9 +37,9 @@ public class Main {
 
         BufferedWriter writer = null;
         try {
-            // CSV 파일 생성
+            // TSV 파일 생성
 
-            writer = new BufferedWriter(new FileWriter("lecture_info.csv"));
+            writer = new BufferedWriter(new FileWriter("lecture_info.tsv"));
             writer.write("전공/계열\t학년\t이수구분\t인재상\t학수번호\t교과목명\t학점\t교수\t교시\t강의실(건물명)\t인원\t강의계획서\t강의평가\t비고\n");
 
             // 한신대 수강신청 로그인 페이지로 이동
@@ -88,12 +88,12 @@ public class Main {
                     // 테이블 셀 가져오기
                     for (WebElement cell : row.findElements(By.tagName("td"))) {
                         if (!firstCell) {
-                            // 셀 내용을 CSV 형식으로 저장
+                            // 셀 내용을 TSV 형식으로 저장
                             rowData.append(cell.getText()).append("\t");
                         }
                         firstCell = false;
                     }
-                    // 행 데이터를 CSV 파일에 저장
+                    // 행 데이터를 TSV 파일에 저장
                     writer.write(rowData.substring(0, rowData.length() - 1) + "\n");
                 }
             }
